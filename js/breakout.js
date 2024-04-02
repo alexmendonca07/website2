@@ -117,6 +117,8 @@ function moveBall() {
     }
 }
 
+
+
 function update() {
     moveBall()
     movePaddle()
