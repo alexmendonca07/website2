@@ -124,7 +124,7 @@ function moveBall() {
                     ball.x + ball.size < block.x + block.w &&
                     ball.y - ball.size < block.y + block.h
                 ) {
-                    ball.dy 
+                    ball.dy = -1 * ball.speed
                 }
             }
         })
