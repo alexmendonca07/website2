@@ -125,13 +125,17 @@ function moveBall() {
                     ball.y - ball.size < block.y + block.h
                 ) {
                     ball.dy = -1 * ball.speed
+                    block.visible = false
+                    increaseScore()
                 }
             }
         })
     })
 }
 
-
+function increaseScore() {
+    score++
+}
 
 function update() {
     moveBall()
