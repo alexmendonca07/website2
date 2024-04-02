@@ -135,6 +135,19 @@ function moveBall() {
 
 function increaseScore() {
     score++
+
+    if (score == blockRowCount * blockColumnCount) {
+        score = 0
+        showAllBlocks()
+    }
+}
+
+function showAllBlocks() {
+    blocks.forEach(column => {
+        column.forEach(block => {
+            block.visible = true
+        })
+    })
 }
 
 function update() {
