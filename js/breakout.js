@@ -4,6 +4,15 @@ blockColumnCount = 5
 
 score = 0
 
+ball = {
+    x: canvas.width / 2,
+    y: canvas.height /2,
+    w: 80,
+    h: 10,
+    dx: 4,
+    dy: -4
+}
+
 paddle = {
     x: canvas.width / 2 - 40,
     y: canvas.height - 20,
@@ -60,10 +69,59 @@ function drawBlocks() {
 
 
 function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     drawPaddle()
     drawBall()
     drawScore()
     drawBlocks()
 }
 
-draw()
+function movePaddle() {
+    paddle.x = paddle.x + paddle.dx
+
+    if (paddle.x < 0) {
+        paddle.x = 0
+    }
+    if (paddle.x + paddle.w > canvas.width) {
+        paddle.x = canvas.width - paddle.w
+    }
+}
+
+function keyDown(e) {
+    if (e.key == 'ArrowRight' || e.key == 'Right') {
+        paddle.dx = paddle.speed
+    }
+    if (e.key == 'ArrowLeft' || e.key == 'Left') {
+        paddle.dx = -paddle.speed
+    }
+}
+
+function keyUp(e) {
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'ArrowLeft' || e.key == 'Left') {
+        paddle.dx = 0
+    }
+}
+
+document.addEventListener('keydown', keyDown)
+document.addEventListener('keyup', keyUp)
+
+function moveBall() {
+    ball.x = ball.x + ball.dx
+    ball.y = ball.y + ball.dy
+
+    if (ball.y + ball.size < 0 || ball.y + ball.size > canvas.height) {
+        ball.dy = -1 * ball.dy
+    }
+    if (ball.x + ball.size > canvas.width || ball.x + ball.size < 0) {
+        ball.dx = -1 * ball.dx
+    }
+}
+
+function update() {
+    moveBall()
+    movePaddle()
+    draw()
+    requestAnimationFrame(update())
+}
+
+update()
