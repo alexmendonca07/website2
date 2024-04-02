@@ -127,7 +127,8 @@ function moveBall() {
                 if (
                     ball.x - ball.size > block.x &&
                     ball.x + ball.size < block.x + block.w &&
-                    ball.y - ball.size < block.y + block.h
+                    ball.y - ball.size < block.y + block.h &&
+                    ball.y + ball.size > block.y
                 ) {
                     ball.dy = -1 * ball.speed
                     block.visible = false
