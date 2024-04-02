@@ -117,7 +117,8 @@ function moveBall() {
     }
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
-        
+        showAllBlocks()
+        score = 0
     }
 
     blocks.forEach(column => {
