@@ -109,11 +109,15 @@ function moveBall() {
     ball.x = ball.x + ball.dx
     ball.y = ball.y + ball.dy
 
-    if (ball.y + ball.size < 0 || ball.y + ball.size > canvas.height) {
+    if (ball.y + ball.size < 0) {
         ball.dy = -1 * ball.dy
     }
     if (ball.x + ball.size > canvas.width || ball.x + ball.size < 0) {
       ball.dx = -1 * ball.dx
+    }
+    if (ball.y + ball.size > canvas.height) {
+        ball.dy = -1 * ball.dy
+        
     }
 
     blocks.forEach(column => {
