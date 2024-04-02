@@ -131,6 +131,8 @@ function moveBall() {
             }
         })
     })
+
+    
 }
 
 function increaseScore() {
