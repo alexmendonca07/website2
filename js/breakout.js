@@ -3,6 +3,7 @@ rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
+startBtn = document.getElementById('start-btn')
 
 rulesBtn.addEventListener('click', () => {
     rules.classList.add('show')
@@ -43,6 +44,11 @@ blockInfo = {
     offsetY: 60,
     visible: true,
 }
+
+startBtn.addEventListener('click', () => {
+    ball.dx = 4;
+    ball.dy = -4;
+})
 
 blocks = []
 for (let i = 0; i < blockRowCount; i++) {
@@ -184,4 +190,4 @@ function update() {
     requestAnimationFrame(update())
 }
 
-update()
+
