@@ -66,5 +66,9 @@ h1 {
 }
 
 .start-btn {
-    
+    position:absolute;
+    color: #0095dd;
+    background-color: aliceblue;
 }
+
+
