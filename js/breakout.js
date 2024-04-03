@@ -1,3 +1,16 @@
+rulesBtn = document.getElementById('rules-btn')
+rules = document.getElementById('rules')
+closeBtn = document.getElementById('close-btn')
+canvas = document.getElementById('canvas')
+ctx = canvas.getContext('2d')
+
+rulesBtn.addEventListener('click', () => {
+    rules.classList.add('show')
+})
+
+closeBtn.addEventListener('click', () => {
+    rules.classList.remove('show')
+})
 
 blockRowCount = 9
 blockColumnCount = 5
@@ -6,7 +19,7 @@ score = 0
 
 ball = {
     x: canvas.width / 2,
-    y: canvas.height /2,
+    y: canvas.height / 2,
     w: 80,
     h: 10,
     dx: 4,
@@ -39,6 +52,14 @@ for (let i = 0; i < blockRowCount; i++) {
         y = j * (blockInfo.h + blockInfo.padding) + blockInfo.offsetY
         blocks[i][j] = {x, y, ...blockInfo}
     }
+}
+
+function drawBall() {
+    ctx.beginPath()
+    ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2, true)
+    ctx.fillStyle = '#0095dd'
+    ctx.fill()
+    ctx.closePath()
 }
 
 function drawPaddle() {
