@@ -23,8 +23,8 @@ ball = {
     y: canvas.height / 2,
     w: 80,
     h: 10,
-    dx: 4,
-    dy: -4
+    dx: 0,
+    dy: 0
 }
 
 paddle = {
@@ -44,11 +44,6 @@ blockInfo = {
     offsetY: 60,
     visible: true,
 }
-
-startBtn.addEventListener('click', () => {
-    ball.dx = 4;
-    ball.dy = -4;
-})
 
 blocks = []
 for (let i = 0; i < blockRowCount; i++) {
@@ -102,6 +97,11 @@ function draw() {
     drawScore()
     drawBlocks()
 }
+
+startBtn.addEventListener('click', () => {
+    ball.dx = 4
+    ball.dy = -4
+})
 
 function movePaddle() {
     paddle.x = paddle.x + paddle.dx
