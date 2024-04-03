@@ -101,6 +101,8 @@ function draw() {
 startBtn.addEventListener('click', () => {
     ball.dx = 4
     ball.dy = -4
+    canvas.classList.remove('pause')
+    update()
 })
 
 function movePaddle() {

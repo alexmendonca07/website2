@@ -19,6 +19,10 @@ canvas {
     border-radius: 5px;
 }
 
+.canvas.pause {
+    background-color: 
+}
+
 h1 {
     font-size: 45px;
     color: aliceblue;
