@@ -65,4 +65,10 @@ h1 {
     transform: translateX(0);
 }
 
+.start {
+    background-color: rgba(0,0,0,0.1);
+}
 
+.start-btn {
+    background-color: #0095dd;
+}
