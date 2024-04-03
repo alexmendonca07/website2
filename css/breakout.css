@@ -13,14 +13,19 @@ body {
     font-family: Arial, sans-serif;
 }
 
-canvas {
+.canvas {
     background-color: aliceblue;
     display: block;
     border-radius: 5px;
 }
 
 .canvas.pause {
-    background-color: 
+    background-color: #eeeeee;
+}
+
+.start-btn {
+    background-color: #0095dd;
+    color: aliceblue;
 }
 
 h1 {
