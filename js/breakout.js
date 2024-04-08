@@ -103,6 +103,7 @@ startBtn.addEventListener('click', () => {
     ball.dy = 4
     canvas.classList.remove('pause')
     update()
+    startBtn.classList.remove('start-btn')
 })
 
 function movePaddle() {
@@ -145,7 +146,8 @@ function moveBall() {
       ball.dx = -1 * ball.dx
     }
     if (ball.y + ball.size > canvas.height) {
-        ball.dy = -1 * ball.dy
+        canvas.classList.add('pause')
+        startBtn.classList.add('start-btn')
         showAllBlocks()
         score = 0
     }
@@ -189,7 +191,10 @@ function update() {
     moveBall()
     movePaddle()
     draw()
-    requestAnimationFrame(update())
+    if (canvas.classList != 'canvas pause' && canvas.classList == 'canvas')
+    {
+        requestAnimationFrame(update())
+    }
 }
 
 
