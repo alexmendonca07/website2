@@ -1,10 +1,10 @@
 screens = document.querySelectorAll('.screen')
 choose_insect_btns = document.querySelectorAll('.choose-insect-btn')
-game_container = document.getElementById('game-container')
-start_btn = document.getElementById('start-btn')
-timeEl = document.getElementById('time')
-scoreEl = document.getElementById('score')
-message = document.getElementById('message')
+const game_container = document.getElementById('game-container')
+const start_btn = document.getElementById('start-btn')
+const timeEl = document.getElementById('time')
+const scoreEl = document.getElementById('score')
+const message = document.getElementById('message')
 let seconds = 0
 let score = 0
 let selected_insect = {}
@@ -15,9 +15,12 @@ start_btn.addEventListener('click', () => {
 
 choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        img = btn.querySelector('img')
-        alt = img.getAttribute('alt')
-        src = img.getAttribute('src')
+        const img = btn.querySelector('img')
+        const alt = img.getAttribute('alt')
+        const src = img.getAttribute('src')
         screen[1].classList.add('up')
+        selected_insect = {src, alt}
     })
 })
+
+
