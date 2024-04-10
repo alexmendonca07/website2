@@ -43,6 +43,23 @@ function catchInsect() {
     addInsects()
 }
 
+function startGame() {
+    setInterval(increaseTime, 1000)
+}
+
+function increaseTime() {
+    let m = Math.floor(seconds / 60)
+    let s = seconds % 60
+    if (m < 10) {
+        m = `0${m}`
+    }
+    if (s < 10) {
+        s = `0${s}`
+    }
+    timeEl.innerHTML = `Time: ${m}:${s}`
+    seconds++
+}
+
 function addInsect() {
     setTimeout(createInsect, 1000)
     setTimeout(createInsect, 1500)
@@ -62,21 +79,4 @@ function getRandomLocation() {
     const x = Math.random() * (width - 200) + 100
     const y = Math.random() * (height - 200) + 100
     return { x, y }
-}
-
-function startGame() {
-    setInterval(increaseTime, 1000)
-}
-
-function increaseTime() {
-    let m = Math.floor(seconds / 60)
-    let s = seconds % 60
-    if (m < 10) {
-        m = `0${m}`
-    }
-    if (s < 10) {
-        s = `0${s}`
-    }
-    timeEl.innerHTML = `Time: ${m}:${s}`
-    seconds++
 }
