@@ -140,3 +140,18 @@ h1 {
     width: 100px;
     height: 100px;
 }
+
+.winning-message {
+    line-height: 2;
+    width: 100%;
+    background-color: rgba(200,3,3,0.3);
+    z-index: 100;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+    opacity: 0;
+}
