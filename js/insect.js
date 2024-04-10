@@ -61,8 +61,8 @@ function increaseTime() {
 }
 
 function addInsect() {
+    setTimeout(createInsect, 500)
     setTimeout(createInsect, 1000)
-    setTimeout(createInsect, 1500)
 }
 
 function increaseScore() {
