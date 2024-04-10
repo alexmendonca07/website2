@@ -5,6 +5,7 @@ const start_btn = document.getElementById('start-btn')
 const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
+const winning_message = document.getElementById('winning-message')
 let seconds = 0
 let score = 0
 let selected_insect = {}
@@ -57,7 +58,12 @@ function increaseTime() {
         s = `0${s}`
     }
     timeEl.innerHTML = `Time: ${m}:${s}`
-    seconds++
+    if (seconds < 30 && score >= 60)
+    {
+        winning_message.classList.add('visible')
+    } else {
+        seconds++
+    }
 }
 
 function addInsects() {
