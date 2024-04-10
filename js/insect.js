@@ -49,7 +49,7 @@ function addInsect() {
 }
 
 function increaseScore() {
-    score++;
+    score++
     if (score > 19) {
         message.classList.add('visible')
     }
@@ -74,4 +74,9 @@ function increaseTime() {
     if (m < 10) {
         m = `0${m}`
     }
+    if (s < 10) {
+        s = `0${s}`
+    }
+    timeEl.innerHTML = `Time: ${m}:${s}`
+    seconds++
 }
