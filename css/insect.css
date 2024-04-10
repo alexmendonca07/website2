@@ -42,7 +42,7 @@ body {
 }
 
 .screen.up {
-    margin-top: -100;
+    margin-top: -100vh;
 }
 
 a {
@@ -71,4 +71,69 @@ h1 {
     color: white;
     cursor: pointer;
     font-family: inherit;
+    width: 150px;
+    height: 150px;
+}
+
+.choose-insect-btn:hover {
+    background-color: white;
+    color: #02020f;
+}
+
+.choose-insect-btn:active {
+    background-color: rgba(255,255,255,0.8)
+}
+
+.game-container {
+    position: relative;
+}
+
+.time {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.message {
+    line-height: 1.7;
+    width: 100%;
+    background-color: rgba(200,3,3,0.3);
+    z-index: 100;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+}
+
+.message.visible {
+    transform: translate(-50%, 150%);
+}
+
+.insect {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+    width: 100px;
+    height: 100px;
 }
