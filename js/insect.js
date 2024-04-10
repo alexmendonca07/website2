@@ -18,5 +18,6 @@ choose_insect_btns.forEach(btn => {
         img = btn.querySelector('img')
         alt = img.getAttribute('alt')
         src = img.getAttribute('src')
+        screen[1].classList.add('up')
     })
 })
