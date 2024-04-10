@@ -9,3 +9,6 @@ let seconds = 0
 let score = 0
 let selected_insect = {}
 
+start_btn.addEventListener('click', () => {
+    screens[0].classList.add('up')
+})
