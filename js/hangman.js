@@ -47,6 +47,8 @@ function updateWrongLettersEl() {
             part.style.display = 'none'
         }
     })
+
+    
 }
 
 function showNotification() {
