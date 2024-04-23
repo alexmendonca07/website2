@@ -48,7 +48,10 @@ function updateWrongLettersEl() {
         }
     })
 
-    
+    if (wrongLetters.length == figureParts.length) {
+        finalMessage.innerText = 'You lost'
+        popup.style.display = 'none'
+    }
 }
 
 function showNotification() {
@@ -79,6 +82,16 @@ window.addEventListener('keydown', e => {
             }
         }
     }
+})
+
+playAgainBtn.addEventListener('click', => {
+    correctLetters.length = 0
+    wrongLetters.length = 0
+    
+
+    figureParts.forEach((part) => {
+        part.style.display = 'none'
+    })
 })
 
 displayWord()
