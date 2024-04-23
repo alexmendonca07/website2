@@ -33,7 +33,9 @@ function displayWord() {
 }
 
 function updateWrongLettersEl() {
-    // update wrong letters list
+    wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+    `
 }
 
 function showNotification() {
