@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Jersey 10", sans-serif;
+    text-align: center;
+    background-color: rgb(2, 8, 2);
+    height: 100vh;
+    margin: none;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    padding: 15px;
+}
+
+a {
+    font-size: 45px;
+    text-decoration: none;
+    color: #17F717;
+}
+
+.tenor-gif-embed {
+    height: 250px;
+    width: 250px;
+    top: 150px;
+}
