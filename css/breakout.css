@@ -72,12 +72,13 @@ h1 {
 }
 
 .start-btn {
-    height: 300px;
-    width: 400px;
+    height: 100px;
+    width: 200px;
     background-color: #0095dd;
     color: aliceblue;
     opacity: 1;
-    top: 20px;
+    align-items: center;
+    justify-content: center;
     position: absolute;
 }
 
