@@ -18,11 +18,6 @@ body {
     background-color: aliceblue;
     display: block;
     border-radius: 5px;
-    z-index: -1;
-}
-
-.canvas.pause {
-    background-color: #eeeeef;
 }
 
 .start-btn {
@@ -76,22 +71,17 @@ h1 {
     transform: translateX(0);
 }
 
-.start {
-    background-color: rgba(0,0,0,0.1);
-    opacity: 1;
-}
-
 .start-btn {
+    height: 300px;
+    width: 400px;
     background-color: #0095dd;
     color: aliceblue;
     opacity: 1;
-    z-index: 1;
+    top: 20px;
 }
 
-.start.play {
-    opacity: 0;
-}
-
-.start-btn.play {
-    opacity: 0;
+.game-container {
+    height: 600px;
+    width: 800px;
+    top: 20px;
 }

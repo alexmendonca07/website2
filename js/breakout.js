@@ -3,7 +3,7 @@ rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
-startBtn = document.getElementById('start-btn')
+startBtn = document.querySelector('.start-btn')
 
 rulesBtn.addEventListener('click', () => {
     rules.classList.add('show')
@@ -19,8 +19,8 @@ blockColumnCount = 5
 score = 0
 
 ball = {
-    x: canvas.width / 2,
-    y: canvas.height / 2,
+    x: 400,
+    y: 300,
     w: 80,
     h: 10,
     dx: 0,
@@ -98,14 +98,14 @@ function draw() {
     drawBlocks()
 }
 
-startBtn.addEventListener('click', () => {
+/*startBtn.addEventListener('click', () => {
     ball.dx = 4
     ball.dy = 4
     canvas.classList.remove('pause')
     update()
     startBtn.classList.remove('start-btn')
 })
-
+*/
 function movePaddle() {
     paddle.x = paddle.x + paddle.dx
 
@@ -118,6 +118,8 @@ function movePaddle() {
 }
 
 function keyDown(e) {
+    ball.dx = 4
+    ball.dy = 4
     if (e.key == 'ArrowRight' || e.key == 'Right') {
         paddle.dx = paddle.speed
     }
@@ -197,4 +199,4 @@ function update() {
     }
 }
 
-
+update()
