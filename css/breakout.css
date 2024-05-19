@@ -79,7 +79,7 @@ h1 {
 .start-btn {
     height: 100px;
     width: 200px;
-    background-color: #0095dd;
+    background-color: rgba(255, 255, 255, 0.2);
     color: aliceblue;
     opacity: 1;
     align-items: center;
