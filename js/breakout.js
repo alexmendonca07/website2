@@ -14,11 +14,11 @@ closeBtn.addEventListener('click', () => {
 })
 
 startBtn.addEventListener('click', () => {
-    canvas.classList.add('play')
+    startBtn.classList.add('.play')
+    canvas.classList.add('.play')
     ball.dx = 4
     ball.dy = 4
     update()
-    startBtn.classList.add('play')
 })
 
 blockRowCount = 9
