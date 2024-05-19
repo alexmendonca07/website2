@@ -59,7 +59,7 @@ function showNotification() {
 
     setTimeout(() => {
         notification.classList.remove('show')
-    }, 3000)
+    }, 2000)
 }
 
 window.addEventListener('keydown', e => {
