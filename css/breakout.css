@@ -74,7 +74,7 @@ h1 {
     transform: translateX(0);
 }
 
-.start-btn {
+.game-container .start-btn {
     cursor: pointer;
     height: 100px;
     width: 200px;
@@ -93,7 +93,7 @@ h1 {
     transform:
 }
 
-container .start-btn:hover {
+.game-container .start-btn:hover {
     background-color: rgba(235, 235, 235, 0.3);
 }
 

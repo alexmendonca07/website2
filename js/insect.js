@@ -58,9 +58,15 @@ function increaseTime() {
         s = `0${s}`
     }
     timeEl.innerHTML = `Time: ${m}:${s}`
-    if (seconds < 30 && score >= 60)
+    if (seconds == 30)
     {
-        winning_message.classList.add('visible')
+        if (score >= 60) {
+            winning_message.classList.add('visible')
+        } else {
+            winning_message.innerHTML = `You lost!`
+            winning_message.classList.add('visible')
+        }
+
     } else {
         seconds++
     }
