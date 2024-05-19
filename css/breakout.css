@@ -43,7 +43,7 @@ h1 {
 }
 
 .btn:hover {
-    background: rgba(0,0,0,0.2);
+    background: rgba(100,100,110,0.9);
 }
 
 .btn:active {
@@ -90,7 +90,11 @@ h1 {
     border: none;
     border-radius: 5px;
     font-size: 25px;
-    transform: 
+    transform:
+}
+
+.start-btn:hover {
+    background-color: rgba(235, 235, 235, 0.3);
 }
 
 .game-container {
