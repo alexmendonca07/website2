@@ -13,6 +13,14 @@ closeBtn.addEventListener('click', () => {
     rules.classList.remove('show')
 })
 
+startBtn.addEventListener('click', () => {
+    canvas.classList.add('play')
+    ball.dx = 4
+    ball.dy = 4
+    update()
+    startBtn.classList.add('play')
+})
+
 blockRowCount = 9
 blockColumnCount = 5
 
@@ -97,14 +105,6 @@ function draw() {
     drawScore()
     drawBlocks()
 }
-
-startBtn.addEventListener('click', () => {
-    canvas.classList.add('play')
-    ball.dx = 4
-    ball.dy = 4
-    update()
-    startBtn.classList.add('play')
-})
 
 function movePaddle() {
     paddle.x = paddle.x + paddle.dx
