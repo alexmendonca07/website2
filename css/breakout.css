@@ -20,6 +20,12 @@ body {
     border-radius: 5px;
 }
 
+.canvas.play{
+    background-color: aliceblue;
+    display: block;
+    border-radius: 5px;
+}
+
 .start-btn {
     background-color: #0095dd;
     color: aliceblue;
@@ -81,6 +87,7 @@ h1 {
     justify-content: center;
     transform: translate(150%, 200%);
     position: absolute;
+    
 }
 
 .game-container {
@@ -88,4 +95,8 @@ h1 {
     width: 800px;
     top: 20px;
     position: relative;
+}
+
+.start-btn.play {
+
 }
