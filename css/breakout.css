@@ -93,7 +93,7 @@ h1 {
     transform:
 }
 
-.start-btn:hover {
+container .start-btn:hover {
     background-color: rgba(235, 235, 235, 0.3);
 }
 
