@@ -3,7 +3,7 @@ rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
-startBtn = document.querySelector('.start-btn')
+startBtn = document.getElementById('start-btn')
 
 rulesBtn.addEventListener('click', () => {
     rules.classList.add('show')
@@ -98,14 +98,14 @@ function draw() {
     drawBlocks()
 }
 
-/*startBtn.addEventListener('click', () => {
+startBtn.addEventListener('click', () => {
+    canvas.classList.add('play')
     ball.dx = 4
     ball.dy = 4
-    canvas.classList.remove('pause')
     update()
-    startBtn.classList.remove('start-btn')
+    startBtn.classList.add('play')
 })
-*/
+
 function movePaddle() {
     paddle.x = paddle.x + paddle.dx
 
