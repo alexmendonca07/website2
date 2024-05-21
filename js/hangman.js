@@ -86,7 +86,7 @@ window.addEventListener('keydown', e => {
     }
 })
 
-playAgainBtn.addEventListener('click', => {
+playAgainBtn.addEventListener('click', () => {
     correctLetters.length = 0
     wrongLetters.length = 0
 
