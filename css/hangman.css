@@ -132,5 +132,12 @@ h1 {
     width: 85px;
     border-radius: 5px;
     border: none;
-    background-color: 
+    background-color: #26394d;
+    color: white;
+    font: inherit;
+    z-index: 100;
+}
+
+.play-button.again {
+    z-index: -1;
 }

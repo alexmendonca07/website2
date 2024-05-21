@@ -51,6 +51,7 @@ function updateWrongLettersEl() {
     if (wrongLetters.length == figureParts.length) {
         finalMessage.innerText = 'You lost'
         popup.style.display = 'none'
+        playAgainBtn.classList.add('again')
     }
 }
 
@@ -98,7 +99,7 @@ playAgainBtn.addEventListener('click', => {
 
     popup.style.display = 'none'
 
-    
+    playAgainBtn.classList.remove('again')
 })
 
 displayWord()
