@@ -19,6 +19,7 @@ startBtn.addEventListener('click', () => {
     }
     startBtn.classList.add('play')
     canvas.classList.add('play')
+    document.getElementById("yippee").play()
     ball.dx = 1
     ball.dy = -1
     draw()
