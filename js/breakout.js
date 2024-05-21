@@ -14,11 +14,14 @@ closeBtn.addEventListener('click', () => {
 })
 
 startBtn.addEventListener('click', () => {
-    startBtn.classList.add('.play')
-    canvas.classList.add('.play')
-    ball.dx = 4
-    ball.dy = 4
-    update()
+    if ('restart' in startBtn.classList) {
+        startBtn.classList.remove('restart')
+    }
+    startBtn.classList.add('play')
+    canvas.classList.add('play')
+    ball.dx = 1
+    ball.dy = -1
+    draw()
 })
 
 blockRowCount = 9
@@ -27,10 +30,10 @@ blockColumnCount = 5
 score = 0
 
 ball = {
-    x: 400,
-    y: 300,
-    w: 80,
-    h: 10,
+    x: canvas.width / 2,
+    y: canvas.height / 2,
+    size: 10,
+    speed: 2,
     dx: 0,
     dy: 0
 }
@@ -118,8 +121,7 @@ function movePaddle() {
 }
 
 function keyDown(e) {
-    ball.dx = 4
-    ball.dy = 4
+    console.log("KeyDown")
     if (e.key == 'ArrowRight' || e.key == 'Right') {
         paddle.dx = paddle.speed
     }
@@ -141,16 +143,30 @@ function moveBall() {
     ball.x = ball.x + ball.dx
     ball.y = ball.y + ball.dy
 
-    if (ball.y + ball.size < 0) {
+    if (ball.y - ball.size < 0) {
         ball.dy = -1 * ball.dy
     }
-    if (ball.x + ball.size > canvas.width || ball.x + ball.size < 0) {
+    if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
       ball.dx = -1 * ball.dx
     }
+
+    if (
+        ball.x - ball.size > paddle.x &&
+        ball.x + ball.size < paddle.x + paddle.w &&
+        ball.y + ball.size >= paddle.y
+    ) {
+        ball.dy = -1 * ball.dy
+    }
+
     if (ball.y + ball.size > canvas.height) {
-        canvas.classList.add('pause')
-        startBtn.classList.add('start-btn')
+        ball.dx = 0
+        ball.dy = 0
+        startBtn.innerHTML = "Play Again?"
+        startBtn.classList.remove('play')
+        startBtn.classList.add('restart')
         showAllBlocks()
+        ball.x = canvas.width / 2
+        ball.y = canvas.height / 2
         score = 0
     }
 
@@ -158,12 +174,13 @@ function moveBall() {
         column.forEach(block => {
             if (block.visible) {
                 if (
-                    ball.x - ball.size > block.x &&
-                    ball.x + ball.size < block.x + block.w &&
+                    ball.x + ball.size > block.x &&
+                    ball.x - ball.size < block.x + block.w &&
                     ball.y - ball.size < block.y + block.h &&
                     ball.y + ball.size > block.y
                 ) {
                     ball.dy = -1 * ball.speed
+                    ball.dx = -1 * ball.dx
                     block.visible = false
                     increaseScore()
                 }
@@ -193,10 +210,11 @@ function update() {
     moveBall()
     movePaddle()
     draw()
-    if (canvas.classList != 'canvas pause' && canvas.classList == 'canvas')
-    {
-        requestAnimationFrame(update())
-    }
+    // if (play in canvas.classList)
+    // {
+    //     requestAnimationFrame(update())
+    // }
+    requestAnimationFrame(update)
 }
 
 update()

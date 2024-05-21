@@ -63,6 +63,7 @@ function showNotification() {
 }
 
 window.addEventListener('keydown', e => {
+    console.log("Press")
     if (e.keyCode >= 65 && e.keyCode <= 90) {
         const letter = e.key
 
@@ -84,18 +85,18 @@ window.addEventListener('keydown', e => {
     }
 })
 
-playAgainBtn.addEventListener('click', => {
-    correctLetters.length = 0
-    wrongLetters.length = 0
+// playAgainBtn.addEventListener('click', => {
+//     correctLetters.length = 0
+//     wrongLetters.length = 0
 
-    selectedIndex = Math.floor(word.length * Math.random())
-    selectedWord = word[selectedIndex]
+//     selectedIndex = Math.floor(word.length * Math.random())
+//     selectedWord = word[selectedIndex]
 
-    displayWord()
+//     displayWord()
 
-    updateWrongLettersEl()
+//     updateWrongLettersEl()
 
-    popup.style.display = 'none'
-})
+//     popup.style.display = 'none'
+// })
 
 displayWord()
