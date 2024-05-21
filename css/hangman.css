@@ -124,3 +124,13 @@ h1 {
 .notification-container.show {
     transform: translateY(-50px);
 }
+
+.play-button {
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 85px;
+    border-radius: 5px;
+    border: none;
+    background-color: 
+}
