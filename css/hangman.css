@@ -125,7 +125,7 @@ h1 {
     transform: translateY(-50px);
 }
 
-.play-button {
+.play-button.again {
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -138,6 +138,6 @@ h1 {
     z-index: 100;
 }
 
-.play-button.again {
+.play-button {
     z-index: -1;
 }
