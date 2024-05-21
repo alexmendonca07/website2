@@ -39,7 +39,7 @@ function updateWrongLettersEl() {
     `
 
     figureParts.forEach((part, index) => {
-        const errors = wrongLetters.length
+        errors = wrongLetters.length
 
         if (index < errors) {
             part.style.display = 'block'
