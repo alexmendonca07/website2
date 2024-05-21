@@ -159,6 +159,7 @@ function moveBall() {
     }
 
     if (ball.y + ball.size > canvas.height) {
+        document.getElementById("fart").play()
         ball.dx = 0
         ball.dy = 0
         startBtn.innerHTML = "Play Again?"
