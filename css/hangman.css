@@ -13,6 +13,7 @@ body {
     height: 80vh;
     margin: 0;
     overflow: hidden;
+    
 }
 
 h1 {
@@ -37,6 +38,7 @@ h1 {
 
 .figure-part {
     display: none;
+    z-index: 100;
 }
 
 .wrong-letters-container {
