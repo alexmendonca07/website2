@@ -37,8 +37,9 @@ h1 {
 }
 
 .figure-part {
-    display: none;
+    display: block;
     z-index: 100;
+    opacity: 1;
 }
 
 .wrong-letters-container {
