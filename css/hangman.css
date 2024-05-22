@@ -28,10 +28,11 @@ h1 {
 }
 
 .figure-container {
-    fill: transparent;
+    fill: white;
     stroke: white;
     stroke-width: 2px;
     stroke-linecap: round;
+    color: white;
 }
 
 .figure-part {
